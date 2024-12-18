@@ -65,13 +65,7 @@ Before you begin, make sure you have the following installed on your system:
      ```
 
 3. **Install Dependencies**
-   Now, you'll need to install all the dependencies required for your project. This can be done using the `requirements.txt` file.
-
-   ```sh
-   pip install -r requirements.txt
-   ```
-
-   Your `requirements.txt` file should contain the following (based on the packages used in your project):
+   Now, you'll need to install all the dependencies required for your project.
 
    ```plaintext
    beautifulsoup4==4.9.3
@@ -91,7 +85,7 @@ Before you begin, make sure you have the following installed on your system:
    ```python
    client = MongoClient('mongodb://localhost:27017/')
    db = client['webscrapr']  # Your database name
-   collection = db['your_collection_name']  # Your collection name
+   collection = db['Web_scraped_data']  # Your collection name
    ```
 
 6. **Run the Django Development Server**
@@ -141,12 +135,12 @@ from pymongo import MongoClient
 # Connect to MongoDB
 client = MongoClient('mongodb://localhost:27017/')  # Update this with your MongoDB connection string if needed
 db = client['webscrapr']  # Your database name
-collection = db['your_collection_name']  # Your collection name
+collection = db['Web_scraped_data']  # Your collection name
 ```
 
 3. **Database and Collection Names**:
    - Replace `'webscrapr'` with the actual name of your database.
-   - Replace `'your_collection_name'` with the name of your collection where you want to store the scraped data.
+   - Replace `'Web_scraped_data'` with the name of your collection where you want to store the scraped data.
 
 #### JSON File Configuration
 
@@ -229,6 +223,6 @@ The `views.py` file contains the core logic for parsing and storing the data fro
         
     -   **Data Insertion**: If no duplicates are found, the cleaned data is inserted into the MongoDB collection.
         
-    -   **HTTP Response**: Returns a success response if all data is processed and inserted correctly.`enter code here`
+    -   **HTTP Response**: Returns a success response if all data is processed and inserted correctly.
 
 
