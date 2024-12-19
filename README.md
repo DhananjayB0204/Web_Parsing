@@ -30,11 +30,13 @@ Welcome to the Web Scraper project documentation! This project demonstrates how 
 
 Great! Let's go through the installation process step-by-step. This will ensure you have all the necessary components installed to get your project up and running smoothly.
 
+Great! Let's go through the installation process step-by-step. This will ensure you have all the necessary components installed to get your project up and running smoothly.
+
 ### Installation
 
 #### Prerequisites
 Before you begin, make sure you have the following installed on your system:
-- **Python **: You can download Python from [python.org](https://www.python.org/).
+- **Python 3.x**: You can download Python from [python.org](https://www.python.org/).
 - **MongoDB**: You can download MongoDB from [mongodb.com](https://www.mongodb.com/try/download/community).
 
 ### Step-by-Step Setup
@@ -65,7 +67,13 @@ Before you begin, make sure you have the following installed on your system:
      ```
 
 3. **Install Dependencies**
-   Now, you'll need to install all the dependencies required for your project.
+   Now, you'll need to install all the dependencies required for your project. This can be done using the `requirements.txt` file.
+
+   ```sh
+   pip install -r requirements.txt
+   ```
+
+   Your `requirements.txt` file should contain the following (based on the packages used in your project):
 
    ```plaintext
    beautifulsoup4==4.9.3
@@ -85,7 +93,7 @@ Before you begin, make sure you have the following installed on your system:
    ```python
    client = MongoClient('mongodb://localhost:27017/')
    db = client['webscrapr']  # Your database name
-   collection = db['Web_scraped_data']  # Your collection name
+   collection = db['your_collection_name']  # Your collection name
    ```
 
 6. **Run the Django Development Server**
@@ -114,6 +122,7 @@ myproject/
 │   ├── views.py
 │   └── ... (other files)
 │
+├── requirements.txt
 └── manage.py
 ```
 
@@ -186,8 +195,10 @@ myproject/
 │   ├── views.py
 │   └── ... (other files)
 │
+├── requirements.txt
 ├── pressranger_scraped_pub_pages.json  # Your JSON file with HTML content
 └── manage.py
+
 ```
 
 ### Code Overview
